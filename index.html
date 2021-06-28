@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css files -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-custom.css">
+
+    <!-- tittle -->
+    <title>Hospital Management System</title>
+</head>
+<body>
+
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-fixed-top bg-dark navbar-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand"><h2>Hospital Managment System</h2></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item">
+                        <a href="#register" class="nav-link">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#login" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+
+
+    <!-- Showcase -->
+    <section class="bg-dark text-light text-sm-start pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card bg-dark">
+                        <div class="card-header">
+                          Login
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <input type="password" id="password"  class="form-control rounded" placeholder="Password" required>
+                                    <div id="passHelp" class="form-text">Try to make it easy to remember but still unique</div>
+                                </div>
+                                
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Remember Me</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary rounded">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <img class="img-fluid p-3" src="./images/doctor.png" alt="Responsive image">
+                </div>
+                <div class="col-xxl">
+                    <div class="container">
+                        <h1>Most reliable doctors and <span class="text-warning">24x7</span> services. </h1>
+                        <p class="lead my-4">
+                            We are working day and night to give someone a good night sleep. In this pandemic, when the whole world is shattered into pieces, we are trying to our very extent to repaire the damage collecting all the pieces. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+
+    <!-- What is HMS ? -->
+
+    <script src="./js/bootstrap.bundle.js"></script>
+</body>
+</html>
+
