@@ -1,24 +1,38 @@
 # Hospital Management System
+
 Hospital Management System using MySQL, Php and Bootstrap
 
 
-Video Demo : [Hospital Management System - Youtube](https://www.youtube.com/watch?v=W2XGSM5i9P8)
+Hospital Management System (HMS) is powerful, flexible, and easy to use system, which is very helpful in a hospital environment, in order to maintain a hospital efficiently. Hospital Management System designed for multi-specialty hospitals, to cover a wide range of hospital administration and management processes. It is an integrated end-to-end Hospital Management System (HMS) that provides relevant information across the hospital to support effective decision making for patient care, hospital administration and critical financial accounting, in a seamless flow. In a HMS need to have entry of all the data related to patients, doctors, staffs, and administrator(s). Each patients admitted in the hospital needs to enter their personal information, which are accessible by authorized doctors and staffs. On the other hand, a patient should have access permission to download any medical report associated with him/her. Billing process should be included in the system, such that it can easily be update after each payment.
 
-Live Demo : [Hospital Management System - 000webhost by Kishan](https://kishan0725.000webhostapp.com)
+ ## Inputs: 
+ 
+ 1. Hospital information (name, address, branch, department, facilities) 
+ 2. Employee information (name, employee id, address, contact details) 
+ 3. Doctor information (name, employee id, address, contact details, specialization, degrees) 
+ 4. Patient information (name, id, address, age, payment, others) 
 
-## Need to work on:
+## Output: 
 
-1. Ability to accept the appointment by the doctor to acknowledge the patient that their appointment has been approved.
-2. User should not be allowed to register if he/she tries to provide the already registered email ID.
-3. The password should be encrypted and the password field shouldn't be displayed in the admin panel.
-4. Implementation of pagination for all the list view across the application.
-5. Bug fix - Bill payment receipt contains multiple record if the patient has associated with the same doctor multiple times.
-6. Addition of more fields in the prescription statement to make it more specific one.
-7. Addition of more details on payment - such as date of the payment made, amount paid, etc.
-8. Implementation of export button in admin module to export all details to an excel sheet.
+1. Patient details 
+2. Patients list 
+3. Receipt generation 
+4. Report generation 
+
+## Constraints: 
+
+1. All the users must register into the system though the web interface. 
+2. All the users must login into the web interface through userid (must be unique) and password 
+3. Patients should allow to get login him/her-self in order to collecting own information 
+4. On login into the system, a doctor must be able to see the patients list under his/her observation 
+5. One patient must not access the information of some other patients 
+6. All the patients must be able to download all the medical report and bill as per his requirement by login into the system 
+
+Add, delete, and update must be reflect immediately in the system
+
 
 ## Prerequisites
-1. Install XAMPP web server
+1. Install WAMP
 2. Any Editor (Preferably VS Code or Sublime Text)
 3. Any web browser with latest version
 
@@ -26,15 +40,15 @@ Live Demo : [Hospital Management System - 000webhost by Kishan](https://kishan07
 1. HTML5/CSS3
 2. JavaScript (to create dynamically updating content)
 3. Bootstrap (An HTML, CSS, and JS library)
-4. XAMPP (A web server by Apache Friends)
+4. WAMP (Windows Apache Mysql Php)
 5. Php
 6. MySQL (An RDBMS that uses SQL)
 7. TCPDF (to generate PDFs)
 
 ## Steps to run the project in your machine
-1. Download and install XAMPP in your machine
+1. Download and install WAMP in your machine
 2. Clone or download the repository
-3. Extract all the files and move it to the 'htdocs' folder of your XAMPP directory.
+3. Extract all the files and move it to the 'www' folder of your WAMP directory.
 4. Start the Apache and Mysql in your XAMPP control panel.
 5. Open your web browser and type 'localhost/phpmyadmin'
 6. In phpmyadmin page, create a new database from the left panel and name it as 'myhmsdb'
