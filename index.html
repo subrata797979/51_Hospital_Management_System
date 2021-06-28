@@ -6,20 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css files -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/bootstrap-custom.css">
+    <link rel="stylesheet" href="./css/dark-mode.css">
 
     <!-- tittle -->
     <title>Hospital Management System</title>
 </head>
-<body>
+<body class="bg-light">
 
     <!-- navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-fixed-top bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-fixed-top">
         <div class="container">
             <a href="#" class="navbar-brand"><h2>Hospital Managment System</h2></a>
+            <div class="form-check form-switch">
+                <label class="label" for="darkSwitch">Dark Mode</label>
+                <input type="checkbox" class="form-check-input" id="darkSwitch" />
+            </div>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                Expand
             </button>
 
             <div class="collapse navbar-collapse" id="navmenu">
@@ -42,11 +46,11 @@
 
 
     <!-- Showcase -->
-    <section class="bg-dark text-light text-sm-start pt-5">
+    <section class="text-sm-start pt-5">
         <div class="container">
             <div class="row">
                 <div class="col-sm">
-                    <div class="card bg-dark">
+                    <div class="card bg-light">
                         <div class="card-header">
                           Login
                         </div>
@@ -90,6 +94,7 @@
     <!-- What is HMS ? -->
 
     <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/dark-mode-switch.min.js"></script>
 </body>
 </html>
 
