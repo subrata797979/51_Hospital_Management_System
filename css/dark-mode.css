@@ -22,3 +22,24 @@
   background-color: #000 !important;
   color: #fff;
 }
+
+[data-theme="dark"] .navbar-light{
+  background-color: #111 !important;
+  color: #fff;
+}
+
+[data-theme="dark"] .navbar-light .navbar-brand{
+  background-color: #111 !important;
+  color: #fff;
+}
+
+[data-theme="dark"] .navbar-light .navbar-toggler{
+  background-color: dodgerblue !important;
+}
+
+[data-theme="dark"] .navbar-light .navbar-collapse .nav-item .nav-link{
+  color: #fff;
+}
+
+
+
