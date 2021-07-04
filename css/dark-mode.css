@@ -4,23 +4,9 @@
   color: #eee;
 }
 
-[data-theme="dark"] .bg-black {
-  background-color: #fff !important;
-  color: #000;
-}
-
-/* [data-theme="dark"] .bg-dark {
-  background-color: #eee !important;
-} */
-
 [data-theme="dark"] .bg-light {
-  background-color: #222 !important;
+  background-color: #323232 !important;
   color: #eee;
-}
-
-[data-theme="dark"] .bg-white {
-  background-color: #000 !important;
-  color: #fff;
 }
 
 [data-theme="dark"] .navbar-light{
