@@ -47,6 +47,10 @@
   border-color: black;
 }
 
+[data-theme="dark"] div.card {
+  box-shadow: 0 4px 8px 0 rgba(161, 179, 0, 0.29), 0 6px 20px 0 rgba(161, 179, 0, 0.29));
+}
+
 
 
 
