@@ -19,11 +19,12 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/dark-mode.css">
 
-
     <!-- tittle -->
     <title>HMS</title>
 </head>
 <body>
+
+   
 
     <!-- navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -54,13 +55,9 @@
         </div>
     </nav>
 
-    
-
-
     <!-- Showcase -->
-    <section class="text-sm-start s1 pt-5">
+    <section class="text-sm-start">
         <div class="container">
-
             <!-- Row 2 -->
             <div class="row ">
 
@@ -143,13 +140,12 @@
             
         </div>
     </section>
-        
-
+    
     <!-- What is HMS ? -->
     <script src="./js/custom.js"></script>
     <script src="./js/bootstrap.bundle.js"></script>
     <script src="./js/dark-mode-switch.min.js"></script>
-    
+
 
 </body>
 </html>

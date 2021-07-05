@@ -10,6 +10,7 @@ echo $user;
 $host='localhost';
 $dbuser='root';
 $dbpass='';
+
 echo $email;
 echo $password;
 

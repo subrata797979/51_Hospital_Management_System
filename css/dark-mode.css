@@ -33,6 +33,11 @@
   border-color: #191919;
 }
 
+[data-theme="dark"] .row .side-light{
+  background-color: #292929 !important;
+  color: #fff;
+}
+
 
 
 
