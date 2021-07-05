@@ -5,9 +5,13 @@ error_reporting(E_PARSE | E_ERROR);
 
 $email=$_POST['email'];
 $password=$_POST['password'];
+$user=$_POST['user'];
+echo $user;
 $host='localhost';
 $dbuser='root';
 $dbpass='';
+echo $email;
+echo $password;
 
 $con=mysqli_connect('localhost','root');
 $select=mysqli_select_db($con,'hms');
@@ -26,21 +30,21 @@ else {
 	$row=mysqli_fetch_assoc($result);
 	$id=$row['id'];
 	$role=$row['role'];
-	echo $num;
-	echo $id;
-	echo $role; 
 
-
-	
-	// if($num==1)
-	// {
-	// 	$_SESSION['email']=$email;
-	// 	$_SESSION['id']=$id;
-	// 	header("location:../udash/{$role}_dash.php");
-	// }else {
-	// 	$_SESSION['message']="Wrong Email or Password";
-	// 	header('location:../index.php');
-	// }
+	if($num==1)
+	{
+		if($user!=$role) {
+			$_SESSION['msg']="Invalid User Type";
+			header('location:../index.php');
+		}else {
+			$_SESSION['email']=$email;
+			$_SESSION['id']=$id;
+			header("location:../udash/{$role}_dash.php");
+		}
+	}else {
+		$_SESSION['msg']="Wrong Email or Password";
+		header('location:../index.php');
+	}
 
 		
 }

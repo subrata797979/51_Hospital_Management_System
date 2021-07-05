@@ -1,9 +1,19 @@
+<?php
+    //warning for wrong password or username
+    session_start();
+    //for hiding errors
+    error_reporting(E_PARSE | E_ERROR);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./images/head.png" type="image">
+
     <!-- css files -->
     <link rel="stylesheet" href="./css/custom.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
@@ -61,34 +71,35 @@
 
                 <div class="col-sm col-md-6 col-lg-5 col-xxl-5 p-5 align-self-center ">
 
-                    <!-- Card Head -->
-                    <div class="card bg-light shadow">
-                        <div class="card-header">
-                            
-                            <div class="row">
-                                <div class="col align-self-center font-weight-bold fs-3">
-                                    Login as
-                                </div>
-                                <div class="col">
-                                    <select class="form-select select-field" id="user" aria-label="Default select example">
-                                        <option selected value="Patient">Patient</option>
-                                        <option value="Doctor">Doctor</option>
-                                        <option value="Employee">Employee</option>
-                                        <option value="Receptionist">Receptionist</option>
-                                    </select>
+                    <form method=POST action="./auth/auth.php">
+                        <!-- Card -->
+                        <div class="card bg-light shadow">
+                            <!-- Card Head -->
+                            <div class="card-header">
+                                
+                                <div class="row">
+                                    <div class="col align-self-center font-weight-bold fs-3">
+                                        Login as
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-control select-field" name='user' aria-label="Default select example">
+                                            <option selected value="Patient">Patient</option>
+                                            <option value="Doctor">Doctor</option>
+                                            <option value="Employee">Employee</option>
+                                            <option value="Receptionist">Receptionist</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Card Body -->
-                        <div class="card-body">
-                            <form method=POST action="./auth/auth.php">
+                            <!-- Card Body -->
+                            <div class="card-body">
                                 <div class="mb-3">
-                                    <input type="email" class="form-control input-field" id="email" name="email" placeholder="Email" required>
+                                    <input type="email" class="form-control input-field" name="email" placeholder="Email" required>
                                 </div>
                                 
                                 <div class="mb-3">
-                                    <input type="password" id="password"  class="form-control input-field" placeholder="Password" required>  
+                                    <input type="password" name="password" class="form-control input-field" placeholder="Password" required>  
                                     <span id="passwordHelpInline" class="form-text mb-3">
                                         Must be 8-20 characters long.
                                     </span>                              
@@ -98,11 +109,21 @@
                                     <input class="form-check-input" type="checkbox" id="rememberMe">
                                     <label class="form-check-label" for="rememberMe">Remember Me</label>
                                 </div>
-
+                                <p>
+                                    <?php 
+                                        $msg=$_SESSION['msg'];
+                                        if (isset($msg))
+                                        {
+                                            echo $msg;
+                                            unset($_SESSION['msg']);
+                                        }
+                                    ?>
+                                </p>
                                 <button class="btn btn-outline-warning" type="submit">Sign In</button>
-                            </form>
+                            </div>
                         </div>
-                    </div>
+                    </form>
+                    
                 </div>
                 
             </div>

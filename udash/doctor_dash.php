@@ -1,3 +1,9 @@
+<?php
+session_start();
+//for hiding errors
+error_reporting(E_PARSE | E_ERROR);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
