@@ -8,5 +8,12 @@
 </head>
 <body>
     <h1>This is patient dashboard</h1>
+    <p>
+        Id : 
+        <?php
+                $id=$_SESSION['id'];
+                echo $id;
+        ?>
+    </p>
 </body>
 </html>

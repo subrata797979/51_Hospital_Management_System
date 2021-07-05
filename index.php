@@ -70,7 +70,7 @@
                                     Login as
                                 </div>
                                 <div class="col">
-                                    <select class="form-select select-field" aria-label="Default select example">
+                                    <select class="form-select select-field" id="user" aria-label="Default select example">
                                         <option selected value="Patient">Patient</option>
                                         <option value="Doctor">Doctor</option>
                                         <option value="Employee">Employee</option>
@@ -82,7 +82,7 @@
 
                         <!-- Card Body -->
                         <div class="card-body">
-                            <form method=POST action="/udash/patient_dash.html">
+                            <form method=POST action="./auth/auth.php">
                                 <div class="mb-3">
                                     <input type="email" class="form-control input-field" id="email" name="email" placeholder="Email" required>
                                 </div>
