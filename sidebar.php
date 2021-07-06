@@ -3,8 +3,7 @@
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
 ?>
-<b>
-<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light navbar-light py-5 shadow-lg">
+<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light navbar-light py-5 shadow">
     <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100">
         <a href="#" class="d-flex align-items-center mb-md-0 me-md-auto text-decoration-none">
             <span class="fs-5 d-none d-sm-inline text-warning">Menu</span>
@@ -68,4 +67,3 @@
         </ul> 
     </div>
 </div>
-</b>

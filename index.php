@@ -8,10 +8,24 @@
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
 
-    $direct=$_SESSION['direct'];
+    $msg=$_SESSION['direct'];
     if(isset($direct)) {
         echo $direct;
         unset($_SESSION['direct']);
+    }
+
+    $msg=$_SESSION['dash_msg'];
+    if (isset($msg))
+    {
+        echo $msg;
+        unset($_SESSION['dash_msg']);
+    }
+
+    $msg=$_SESSION['admin_msg'];
+    if (isset($msg))
+    {
+        echo $msg;
+        unset($_SESSION['admin_msg']);
     }
 
 ?>
@@ -35,12 +49,7 @@
 </head>
 <body>
     <?php 
-        $msg=$_SESSION['dash_msg'];
-        if (isset($msg))
-        {
-            echo $msg;
-            unset($_SESSION['dash_msg']);
-        }
+        
     ?>
 
     <?php

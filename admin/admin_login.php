@@ -6,9 +6,17 @@
     error_reporting(E_PARSE | E_ERROR);
 
     $id=$_SESSION['id'];
-    if (isset($id))
-    {
-        header('location:./admin_dash.php');
+    $role=$_SESSION['role'];
+
+    if (isset($id)) {
+        if($role=="Admin") {
+            header('location:./admin_dash.php');
+        }
+        else {
+            $_SESSION['admin_msg'] = '<script>alert("Not an admin! Logout first!!")</script>';
+            header('location:../index.php');
+            exit;
+        }
     }
 ?>
 
