@@ -7,6 +7,13 @@
     require_once __DIR__ . '/vendor/autoload.php';
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
+
+    $direct=$_SESSION['direct'];
+    if(isset($direct)) {
+        echo $direct;
+        unset($_SESSION['direct']);
+    }
+
 ?>
 
 <!DOCTYPE html>

@@ -2,7 +2,7 @@
 session_start();
 //for hiding errors
 error_reporting(E_PARSE | E_ERROR);
-require "{$_ENV['HMS']}/auth/dashboard_auth.php";
+require "../auth/direct_access_auth.php";
 ?>
 
 <!DOCTYPE html>
