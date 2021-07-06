@@ -1,3 +1,9 @@
+<?php
+    require __DIR__ . '/vendor/autoload.php';
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+?>
+
 <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light navbar-light py-5">
     <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100">
         <a href="/" class="d-flex align-items-center mb-md-0 me-md-auto text-decoration-none">
@@ -5,7 +11,7 @@
         </a>
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
             <li class="nav-item">
-                <a href="#" class="nav-link align-middle px-0">
+                <a href="<?php echo $_ENV['HMS']?>" class="nav-link align-middle px-0">
                     <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
                 </a>
             </li>

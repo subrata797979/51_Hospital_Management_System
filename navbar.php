@@ -1,3 +1,8 @@
+<?php
+    require __DIR__ . '/vendor/autoload.php';
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+?>
 <!-- navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
@@ -14,7 +19,7 @@
         <div class="collapse navbar-collapse" id="navmenu">
             <ul class="navbar-nav ms-auto text-center ">
                 <li class="nav-item">
-                    <a href="./admin/admin_login.php" class="nav-link text-warning">Admin</a>
+                    <a href="http://<?php echo $_ENV[HOME]?>/admin/admin_login.php" class="nav-link text-warning">Admin</a>
                 </li>
                 <li class="nav-item">
                     <a href="#login" class="nav-link">Contact</a>

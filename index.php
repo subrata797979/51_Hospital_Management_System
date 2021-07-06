@@ -117,7 +117,7 @@
     <!-- What is HMS ? -->
     <script src="./js/custom.js"></script>
     <script src="./js/bootstrap.bundle.js"></script>
-    <script src="./js/dark-mode-switch.min.js"></script>
+    <script src="./js/dark-mode-switch.js"></script>
 
 
 </body>
