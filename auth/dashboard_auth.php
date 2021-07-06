@@ -25,7 +25,7 @@
     }
     else {
         if($role=='Admin') {
-            header("location:{$hms}/udash/admin_dash.php");
+            header("location:{$hms}/admin/admin_dash.php");
         }
         else {
             header("location:{$hms}/udash/{$role}_dash.php");

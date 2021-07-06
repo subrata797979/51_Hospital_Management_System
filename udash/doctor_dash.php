@@ -2,6 +2,7 @@
 session_start();
 //for hiding errors
 error_reporting(E_PARSE | E_ERROR);
+require "{$_ENV['HMS']}/auth/dashboard_auth.php";
 ?>
 
 <!DOCTYPE html>
