@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="navmenu">
             <ul class="navbar-nav ms-auto text-center ">
                 <li class="nav-item">
-                    <a href="http://<?php echo $_ENV[HOME]?>/admin/admin_login.php" class="nav-link text-warning">Admin</a>
+                    <a href="<?php echo $_ENV[HMS]?>/admin/admin_login.php" class="nav-link text-warning">Admin</a>
                 </li>
                 <li class="nav-item">
                     <a href="#login" class="nav-link">Contact</a>
