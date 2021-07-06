@@ -40,6 +40,7 @@ else {
 		}else {
 			$_SESSION['email']=$email;
 			$_SESSION['id']=$id;
+			$_SESSION['role']=$role;
 			header("location:../udash/{$role}_dash.php");
 		}
 	}else {

@@ -3,10 +3,10 @@
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
 ?>
-
-<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light navbar-light py-5">
+<b>
+<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light navbar-light py-5 shadow-lg">
     <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100">
-        <a href="/" class="d-flex align-items-center mb-md-0 me-md-auto text-decoration-none">
+        <a href="#" class="d-flex align-items-center mb-md-0 me-md-auto text-decoration-none">
             <span class="fs-5 d-none d-sm-inline text-warning">Menu</span>
         </a>
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
@@ -62,9 +62,10 @@
                 </ul>
             </li>
             <li>
-                <a href="#" class="nav-link px-0 align-middle">
-                    <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span> </a>
+                <a href="<?php echo $_ENV['HMS']?>/unset.php" class="nav-link px-0 align-middle">
+                    <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline text-danger">Log Out</span> </a>
             </li>
         </ul> 
     </div>
 </div>
+</b>

@@ -32,21 +32,21 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-xl-4 offset-md-3 offset-xl-4 pt-5">
-                <div class="login-form bg-light navbar-light mt-4 p-4">
+            <div class="col-md-6 col-xl-4 offset-md-3 offset-xl-4 pt-4">
+                <div class="login-form bg-light navbar-light mt-4 p-4 shadow">
                     <form action="./admin_auth.php" method="POST" class="row g-3">
-                        <h3>Welcome Admin</h3>
+                        <h3  class="text-center pb-3"><b>Hello Admin!</b></h3>
                         <div class="col-12">
                             <label><h6>Email</h6></label>
-                            <input type="email" name="email" class="form-control" placeholder="Email">
+                            <input type="email" name="email" class="form-control shadow-sm" placeholder="Email">
                         </div>
                         <div class="col-12">
                             <label><h6>Password</h6></label>
-                            <input type="password" name="password" class="form-control" placeholder="Password">
+                            <input type="password" name="password" class="form-control shadow-sm" placeholder="Password">
                         </div>
                         <div class="col-12">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="rememberMe">
+                                <input class="form-check-input shadow-sm" type="checkbox" id="rememberMe">
                                 <label class="form-check-label" for="rememberMe"> Remember Me</label>
                             </div>
                             <p>
@@ -62,8 +62,8 @@
                         </div>
                         <div class="col-12">
                             <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                            <label class="btn btn-outline-warning" for="btncheck1">Developer</label>
-                            <button type="submit" class="btn btn-outline-primary float-end">Login</button>
+                            <label class="btn btn-outline-warning shadow" for="btncheck1">Developer</label>
+                            <button type="submit" class="btn btn-outline-primary float-end shadow">Login</button>
                         </div>
                     </form>
                     <hr class="mt-4">

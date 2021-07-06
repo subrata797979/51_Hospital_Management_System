@@ -41,6 +41,7 @@ else {
 		}else {
 			$_SESSION['email']=$email;
 			$_SESSION['id']=$id;
+			$_SESSION['role']=$role;
 			header("location:./{$role}_dash.php");
 		}
 	}else {

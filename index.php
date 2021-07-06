@@ -3,6 +3,10 @@
     session_start();
     //for hiding errors
     error_reporting(E_PARSE | E_ERROR);
+
+    require_once __DIR__ . '/vendor/autoload.php';
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +27,14 @@
     <title>HMS</title>
 </head>
 <body>
+    <?php 
+        $msg=$_SESSION['dash_msg'];
+        if (isset($msg))
+        {
+            echo $msg;
+            unset($_SESSION['dash_msg']);
+        }
+    ?>
 
     <?php
         include './navbar.php';
@@ -35,13 +47,13 @@
             <div class="row ">
 
                 <div class="col-md col-lg-7 col-xxl-7 align-self-center">
-                    <img class="img-fluid mx-auto d-block joinus " src="./images/doctor.png" alt="Responsive image">
+                    <img class="img-fluid mx-auto d-block joinus pt-2" src="./images/doctor.png" alt="Responsive image">
 
                 </div>
 
                 <div class="col-sm col-md-6 col-lg-5 col-xxl-5 p-5 align-self-center ">
 
-                    <form method=POST action="./auth/auth.php">
+                    <form method=POST action="./auth/login_auth.php">
                         <!-- Card -->
                         <div class="card bg-light shadow">
                             <!-- Card Head -->
@@ -52,7 +64,7 @@
                                         Login as
                                     </div>
                                     <div class="col">
-                                        <select class="form-control select-field" name='user' aria-label="Default select example">
+                                        <select class="form-control select-field shadow-sm" name='user' aria-label="Default select example">
                                             <option selected value="Patient">Patient</option>
                                             <option value="Doctor">Doctor</option>
                                             <option value="Employee">Employee</option>
@@ -65,18 +77,18 @@
                             <!-- Card Body -->
                             <div class="card-body">
                                 <div class="mb-3">
-                                    <input type="email" class="form-control input-field" name="email" placeholder="Email" required>
+                                    <input type="email" class="form-control input-field shadow-sm" name="email" placeholder="Email" required>
                                 </div>
                                 
                                 <div class="mb-3">
-                                    <input type="password" name="password" class="form-control input-field" placeholder="Password" required>  
+                                    <input type="password" name="password" class="form-control input-field shadow-sm" placeholder="Password" required>  
                                     <span id="passwordHelpInline" class="form-text mb-3">
                                         Must be 8-20 characters long.
                                     </span>                              
                                 </div>
                                 
                                 <div class="mb-3 form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="rememberMe">
+                                    <input class="form-check-input shadow-sm" type="checkbox" id="rememberMe">
                                     <label class="form-check-label" for="rememberMe">Remember Me</label>
                                 </div>
                                 <p>
@@ -89,7 +101,7 @@
                                         }
                                     ?>
                                 </p>
-                                <button class="btn btn-outline-warning" type="submit">Sign In</button>
+                                <button class="btn btn-outline-warning shadow" type="submit">Sign In</button>
                             </div>
                         </div>
                     </form>
