@@ -41,6 +41,10 @@ else {
 			$_SESSION['email']=$email;
 			$_SESSION['id']=$id;
 			$_SESSION['role']=$role;
+			if(isset($_POST['rememberMe'])) {
+				setcookie('email',$email,time()+60*60*7);
+				setcookie('password',$password,time()+60*60*7);
+			}
 			header("location:../udash/{$role}_dash.php");
 		}
 	}else {

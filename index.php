@@ -40,14 +40,14 @@
     <link rel="icon" href="./images/head.png" type="image">
 
     <!-- css files -->
-    <link rel="stylesheet" href="./css/custom.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="./css/custom.css">
     <link rel="stylesheet" href="./css/dark-mode.css">
 
     <!-- tittle -->
     <title>HMS</title>
 </head>
-<body>
+<body id="bo">
     <?php 
         
     ?>
@@ -71,7 +71,7 @@
 
                     <form method=POST action="./auth/login_auth.php">
                         <!-- Card -->
-                        <div class="card bg-light shadow">
+                        <div class="card bg-light">
                             <!-- Card Head -->
                             <div class="card-header">
                                 

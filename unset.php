@@ -12,7 +12,6 @@
     $role = $_SESSION['role'];
     
     if (isset($id)) {
-        unset($_SESSION['id']);
         session_destroy();
         if($role=='Admin') {
             header('location:./admin/admin_login.php');
