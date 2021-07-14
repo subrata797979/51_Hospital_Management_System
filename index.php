@@ -40,8 +40,8 @@
     <link rel="icon" href="./images/head.png" type="image">
 
     <!-- css files -->
-    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
-    <link rel="stylesheet" type="text/css" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/dark-mode.css">
 
     <!-- tittle -->
@@ -71,7 +71,7 @@
 
                     <form method=POST action="./auth/login_auth.php">
                         <!-- Card -->
-                        <div class="card bg-light">
+                        <div class="card bg-light shadow-lg">
                             <!-- Card Head -->
                             <div class="card-header">
                                 
@@ -117,7 +117,7 @@
                                         }
                                     ?>
                                 </p>
-                                <button class="btn btn-outline-warning shadow" type="submit">Sign In</button>
+                                <button class="btn btn-outline-warning" type="submit">Sign In</button>
                             </div>
                         </div>
                     </form>
