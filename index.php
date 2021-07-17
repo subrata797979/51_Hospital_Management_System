@@ -47,7 +47,7 @@
     <!-- tittle -->
     <title>HMS</title>
 </head>
-<body id="bo">
+<body>
     <?php 
         
     ?>
