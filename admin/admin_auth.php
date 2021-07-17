@@ -1,5 +1,4 @@
 <?php
-session_start();
 //for hiding errors
 error_reporting(E_PARSE | E_ERROR);
 
@@ -39,9 +38,12 @@ else {
 			$_SESSION['msg']="Not an Admin";
 			header('location:./admin_login.php');
 		}else {
+			session_start();
 			$_SESSION['email']=$email;
 			$_SESSION['id']=$id;
 			$_SESSION['role']=$role;
+			setcookie('id', $id, '/');
+			setcookie('role', $role, '/');
 			header("location:./{$role}_dash.php");
 		}
 	}else {

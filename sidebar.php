@@ -61,7 +61,7 @@
                 </ul>
             </li>
             <li>
-                <a href="<?php echo $_ENV['HMS']?>/unset.php" class="nav-link px-0 align-middle">
+                <a href="<?php echo $_ENV['HTTP']?>/unset.php" class="nav-link px-0 align-middle">
                     <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline text-danger">Log Out</span> </a>
             </li>
         </ul> 

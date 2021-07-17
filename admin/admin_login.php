@@ -8,15 +8,8 @@
     $id=$_SESSION['id'];
     $role=$_SESSION['role'];
 
-    if (isset($id)) {
-        if($role=="Admin") {
-            header('location:./admin_dash.php');
-        }
-        else {
-            $_SESSION['admin_msg'] = '<script>alert("Not an admin! Logout first!!")</script>';
-            header('location:../index.php');
-            exit;
-        }
+    if (isset($_COOKIE['id']) and $_COOKIE['role']=="Admin") {
+        header('location:./admin_dash.php');
     }
 ?>
 

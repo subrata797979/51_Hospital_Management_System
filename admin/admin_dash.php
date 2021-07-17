@@ -21,7 +21,7 @@ require "../auth/direct_access_auth.php";
 </head>
 <body>
     <?php
-        include '../navbar.php';
+        include '../dash_navbar.php';
     ?>
     
     <div class="container-fluid">

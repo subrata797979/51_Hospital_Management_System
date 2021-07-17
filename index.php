@@ -1,33 +1,15 @@
 <?php
-    //warning for wrong password or username
-    session_start();
     //for hiding errors
     error_reporting(E_PARSE | E_ERROR);
-
+    //warning for wrong password or username
+    if(isset($_SESSION)) {
+        session_start();
+    }
     require_once __DIR__ . '/vendor/autoload.php';
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
 
-    $msg=$_SESSION['direct'];
-    if(isset($direct)) {
-        echo $direct;
-        unset($_SESSION['direct']);
-    }
-
-    $msg=$_SESSION['dash_msg'];
-    if (isset($msg))
-    {
-        echo $msg;
-        unset($_SESSION['dash_msg']);
-    }
-
-    $msg=$_SESSION['admin_msg'];
-    if (isset($msg))
-    {
-        echo $msg;
-        unset($_SESSION['admin_msg']);
-    }
-
+    require './auth/index_auth.php';
 ?>
 
 <!DOCTYPE html>
