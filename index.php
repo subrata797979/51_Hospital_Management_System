@@ -1,15 +1,15 @@
 <?php
     //for hiding errors
     error_reporting(E_PARSE | E_ERROR);
-    //warning for wrong password or username
-    if(isset($_SESSION)) {
-        session_start();
-    }
+    
     require_once __DIR__ . '/vendor/autoload.php';
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
-
-    require './auth/index_auth.php';
+    if(isset($_COOKIE['PHPSESSID'])) {
+        $sid=$_COOKIE['sid'];
+        $srole=$_COOKIE['srole'];
+        header("location:{$_ENV['HTTP']}/udash/{$srole}_dash.php");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -25,28 +25,25 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/dark-mode.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <!-- tittle -->
     <title>HMS</title>
 </head>
 <body>
-    <?php 
-        
-    ?>
-
+    
     <?php
         include './navbar.php';
     ?>
 
     <!-- Showcase -->
-    <section class="text-sm-start">
+    <section class="text-sm-start mt-3">
         <div class="container">
             <!-- Row 2 -->
             <div class="row ">
 
                 <div class="col-md col-lg-7 col-xxl-7 align-self-center">
                     <img class="img-fluid mx-auto d-block joinus pt-2" src="./images/doctor.png" alt="Responsive image">
-
                 </div>
 
                 <div class="col-sm col-md-6 col-lg-5 col-xxl-5 p-5 align-self-center ">
@@ -67,6 +64,7 @@
                                             <option value="Doctor">Doctor</option>
                                             <option value="Employee">Employee</option>
                                             <option value="Receptionist">Receptionist</option>
+                                            <option value="Admin">Admin</option>
                                         </select>
                                     </div>
                                 </div>
@@ -74,17 +72,14 @@
 
                             <!-- Card Body -->
                             <div class="card-body">
-                                <div class="mb-3">
-                                    <input type="email" class="form-control input-field shadow-sm" name="email" placeholder="Email" required>
-                                </div>
-                                
-                                <div class="mb-3">
-                                    <input type="password" name="password" class="form-control input-field shadow-sm" placeholder="Password" required>  
-                                    <span id="passwordHelpInline" class="form-text mb-3">
-                                        Must be 8-20 characters long.
-                                    </span>                              
-                                </div>
-                                
+                                <div class="mb-3 input-group">
+                                    <span class="input-group-text"><i class="fas fa-at"></i></span>
+                                    <input type="email" class="form-control shadow-sm" name="email" placeholder="Email" required>
+                                </div> 
+                                <div class="mb-3 input-group">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    <input type="password" name="password" class="form-control shadow-sm" placeholder="Password" required>                              
+                                </div> 
                                 <div class="mb-3 form-check form-switch">
                                     <input class="form-check-input shadow-sm" type="checkbox" id="rememberMe">
                                     <label class="form-check-label" for="rememberMe">Remember Me</label>
@@ -123,6 +118,10 @@
             
         </div>
     </section>
+
+    <?php
+    include './footer.php';
+    ?>
     
     <!-- What is HMS ? -->
     <script src="./js/custom.js"></script>

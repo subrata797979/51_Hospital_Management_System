@@ -1,21 +1,17 @@
 <?php
-session_start();
 //for hiding errors
 error_reporting(E_PARSE | E_ERROR);
+$upOne = dirname(__DIR__, 1);
+require_once $upOne . '/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable($upOne);
+$dotenv->load();
 
 $email=$_POST['email'];
 $password=$_POST['password'];
 $user=$_POST['user'];
-echo $user;
-$host='localhost';
-$dbuser='root';
-$dbpass='';
 
-echo $email;
-echo $password;
-
-$con=mysqli_connect('localhost','root');
-$select=mysqli_select_db($con,'hms');
+$con=mysqli_connect($_ENV['LOCALHOST'],$_ENV['DBU']);
+$select=mysqli_select_db($con,$_ENV['DB']);
 if($select!=1)
 {
 	echo"Error occures to login...".mysqli_connect_error();
@@ -29,33 +25,35 @@ else {
 	
 	//Retriving username 
 	$row=mysqli_fetch_assoc($result);
-	$id=$row['id'];
 	$role=$row['role'];
 
 	if($num==1)
 	{
 		if($user!=$role) {
-			$_SESSION['msg']="Invalid User Type";
-			header('location:../index.php');
+			$_COOKIE['msg']="Invalid User Type";
+			header('location:'.$_ENV['HTTP'].'/index.php');
 		}else {
-			$_SESSION['email']=$email;
-			$_SESSION['id']=$id;
+			session_id($row['id']);
+			setcookie('sid',$row['id'],0,'/');
+			setcookie('srole',$row['role'],0,'/');
+			session_start();
 			$_SESSION['role']=$role;
-			if(isset($_POST['rememberMe'])) {
-				setcookie('email',$email,time()+60*60*7);
-				setcookie('password',$password,time()+60*60*7);
+			//echo $_COOKIE['PHPSESSID'];
+			if(isset($_POST['remember'])) {
+				setcookie('PHPSESSID', '', time() - 86400,'/');
+				setcookie('PHPSESSID',$row['id'], time()+60*60*24*30,'/');
 			}
-			header("location:../udash/{$role}_dash.php");
+			header("location:".$_ENV['HTTP']."/udash/{$role}_dash.php");
 		}
 	}else {
-		$_SESSION['msg']="Wrong Email or Password";
-		header('location:../index.php');
+		$_COOKIE['msg']="Wrong Email or Password";
+		header('location:'.$_ENV['HTTP'].'/index.php');
 	}
 
 		
 }
-mysqli_free_result();
-mysqli_close();
+mysqli_free_result($result);
+mysqli_close($con);
 ?>
 
 
