@@ -42,11 +42,11 @@
             <!-- Row 2 -->
             <div class="row ">
 
-                <div class="col-md col-lg-7 col-xxl-7 align-self-center">
+                <div class="col-md col-lg-6 col-xxl-7 align-self-center">
                     <img class="img-fluid mx-auto d-block joinus pt-2" src="./images/doctor.png" alt="Responsive image">
                 </div>
 
-                <div class="col-sm col-md-6 col-lg-5 col-xxl-5 p-5 align-self-center ">
+                <div class="col-sm col-md-6 col-lg-6 col-xxl-4 p-5 align-self-center ">
 
                     <form method=POST action="./auth/login_auth.php">
                         <!-- Card -->
@@ -56,10 +56,10 @@
                                 
                                 <div class="row">
                                     <div class="col align-self-center font-weight-bold fs-3">
-                                        Login as
+                                        Login as <span class="text-warning"><i class="fas fa-arrow-circle-right"></i></span>
                                     </div>
                                     <div class="col">
-                                        <select class="form-control select-field shadow-sm" name='user' aria-label="Default select example">
+                                        <select class="form-control select-field shadow-sm border border-warning" name='user' aria-label="Default select example">
                                             <option selected value="Patient">Patient</option>
                                             <option value="Doctor">Doctor</option>
                                             <option value="Employee">Employee</option>

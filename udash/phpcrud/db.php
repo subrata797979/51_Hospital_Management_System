@@ -1,10 +1,13 @@
 <?php
 
+//for hiding errors
+error_reporting(E_PARSE | E_ERROR);
+
 function Createdb(){
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "bookstore";
+    $dbname = "hms";
 
     // create connection
     $con = mysqli_connect($servername, $username, $password);
@@ -21,11 +24,16 @@ function Createdb(){
         $con = mysqli_connect($servername, $username, $password, $dbname);
 
         $sql = "
-                        CREATE TABLE IF NOT EXISTS books(
-                            id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                            book_name VARCHAR (25) NOT NULL,
-                            book_publisher VARCHAR (20),
-                            book_price FLOAT 
+                        CREATE TABLE IF NOT EXISTS doctor (
+                            did INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                            dname VARCHAR (25) NOT NULL,
+                            addr VARCHAR (50),
+                            dob date,
+                            email VARCHAR (30) NOT NULL,
+                            spl VARCHAR (30),
+                            ph VARCHAR (20),
+                            expr VARCHAR (30),
+                            sal FLOAT
                         );
         ";
 
