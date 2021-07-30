@@ -2,9 +2,10 @@
   font-size: 16px; 
   font-family: 'Open Sans'; 
   --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
+  --text-secondary: #181818;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
+  --transition-speed: 200ms;
 }
 
 body {
@@ -26,16 +27,19 @@ body::-webkit-scrollbar-thumb {
     background: #6649b8;
 }
 
+/* navbar */
+.navbar {
+    z-index: 1;
+}
 
 
 
 
 /* sidebar css */
 .sidebar {
-    width: 5rem;
-    height: 100vh;
     position: fixed;
     background-color: var(--bg-primary);
+    transition: width var(--transition-speed) ease;
 }
 
 .sidebar-side {
@@ -50,30 +54,124 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
 }
 
+a:hover {
+    color:white;
+}
+
 .side-link {
     display: flex;
     align-items: center;
     height: 5rem;
     color: var(--text-primary);
     text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+
+.side-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background-color: var(--text-secondary);
+    font-weight: bold;
 }
 
 .link-text {
     display: none;
-    margin-left: 1rem;
+    margin-left: 0.7rem;
 }
 
 .side-link svg {
-    min-width: 2rem;
+    max-width: 2rem;
     margin: 0 1.5rem;
 }
 
+.side-link:hover svg {
+    max-width: 3rem;
+    margin: 0 1.5rem;
+}
+
+.side-link:hover .link-text {
+    font-size: 1.5rem;
+}
+
 .sidebar:hover {
-    width: 16rem;
+    z-index: 2;
 }
 
-.sidebar:hover .link-text {
-    display: block;
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color:var(--text-secondary);
+    background: var(--bg-secondary);
+    width: 100%;
+}
+
+.logo svg {
+    transform: rotate(0deg);
+    transition: transform var(--transition-speed);
+}
+
+.sidebar:hover .logo svg {
+    transform: rotate(-180deg);
+}
+
+/* large screens */
+@media only screen and (min-width: 600px) {
+    .sidebar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+    .sidebar:hover {
+        width: 16rem;
+    }
+
+    .sidebar:hover .link-text {
+        display: inline;
+        transition: opacity var(--transition-speed);
+    }
+    .sidebar:hover .link-text {
+        display: block;
+    }
+    
+    /* main css */
+    main {
+        margin-left: 5rem;
+    }
+
+    article {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
+
+/* small screens */
+@media only screen and (max-width: 600px) {
+    .sidebar {
+        bottom : 0;
+        width: 100vw;
+        height: 5rem;
+    }
+    .logo {
+        display: none;
+    }
+    .sidebar-side {
+        flex-direction: row;
+    }
+    .side-link {
+        justify-content: center;
+    }
+
+    main {
+        margin: 0;
+        padding: 0;
+    }
+    article {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
 }
 
 
@@ -81,14 +179,3 @@ body::-webkit-scrollbar-thumb {
 
 
 
-
-/* main css */
-main {
-    margin-left: 5rem;
-    padding-left: 1rem;
-}
-
-article {
-    margin: 1rem;
-    padding: 1rem;
-}

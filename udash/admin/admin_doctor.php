@@ -2,7 +2,7 @@
 <?php
 //for hiding errors
 //error_reporting(E_PARSE | E_ERROR);
-$upOne = dirname(__DIR__, 1);
+$upOne = dirname(__DIR__, 2);
 require_once $upOne . '/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable($upOne);
 $dotenv->load();
@@ -29,28 +29,7 @@ require_once("./admin-doctor/operation.php");
     <title>Admin Dashboard</title>
 </head>
 
-<body style="min-height: 100vh; width: 100%;min-width: 800px;" class="bg-light">
-    <!-- sidebar start -->
-    <!-- sidebar start -->
-    <nav class="navbar bg-dark navbar-expand d-flex flex-column align-item-start" id="sidebar">
-        <a href="#" class="navbar-brand text-light mt-5">
-            <div class="display-6 font-weight-bold">DASHBOARD</div>
-        </a>
-        <ul class="navbar-nav d-flex flex-column mt-5 w-100">
-            <li class="nav-item w-100">
-                <a href="<?php echo $_ENV['HTTP']?>/udash/admin_doctor.php" class="nav-link text-light pl-4">Doctor</a>
-            </li>
-            <li class="nav-item w-100">
-                <a href="<?php echo $_ENV['HTTP']?>/udash/admin_receptionist.php" class="nav-link text-light pl-4">Receptionist</a>
-            </li>
-            <li class="nav-item w-100">
-                <a href="<?php echo $_ENV['HTTP']?>/udash/admin_employee.php" class="nav-link text-light pl-4">Employee</a>
-            </li>
-            <li class="nav-item w-100">
-                <a href="<?php echo $_ENV['HTTP']?>/udash/admin_patient.php" class="nav-link text-light pl-4">Patient</a>
-            </li>
-        </ul>
-    </nav>
+<body>
 
     <section class="my-container">
         <!-- topbar start -->
