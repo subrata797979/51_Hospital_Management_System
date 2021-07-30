@@ -8,7 +8,7 @@
     if(isset($_COOKIE['PHPSESSID'])) {
         $sid=$_COOKIE['sid'];
         $srole=$_COOKIE['srole'];
-        header("location:{$_ENV['HTTP']}/udash/{$srole}_dash.php");
+        header("location:{$_ENV['HTTP']}/udash/{$srole}/{$srole}_dash.php");
     }
 ?>
 

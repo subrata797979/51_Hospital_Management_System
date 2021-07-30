@@ -43,7 +43,7 @@ else {
 				setcookie('PHPSESSID', '', time() - 86400,'/');
 				setcookie('PHPSESSID',$row['id'], time()+60*60*24*30,'/');
 			}
-			header("location:".$_ENV['HTTP']."/udash/{$role}_dash.php");
+			header("location:".$_ENV['HTTP']."/udash/{$role}/{$role}_dash.php");
 		}
 	}else {
 		$_COOKIE['msg']="Wrong Email or Password";
