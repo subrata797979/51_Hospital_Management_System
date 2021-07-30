@@ -28,7 +28,11 @@ require_once("./admin-doctor/operation.php");
 </head>
 
 <body>
-    <?php include '../dash_navbar.pnp'; ?>
+
+    <?php 
+        include '../dash_navbar.pnp'; 
+    ?>
+    
     <aside>
         <ul>
             <li>One</li>
