@@ -22,29 +22,26 @@ require_once("./admin-doctor/operation.php");
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/dark-mode.css">
     <link rel="stylesheet" href="../../css/dash.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/fa.css">
 
     <title>Admin Dashboard</title>
 </head>
 
-<body style="min-height: 100vh; width: 100%;min-width: 800px;" class="bg-light">
-    
+<body>
+    <?php include '../dash_navbar.pnp'; ?>
+    <aside>
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+    </aside>
+    <main>
+
+    </main>
     <!-- js files -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="../../js/custom.js"></script>
     <script src="../../js/bootstrap.bundle.js"></script>
     <script src="../../js/dark-mode-switch.min.js"></script>
-    <script src="../../js/jquery-3.6.0.min.js"></script>
-    <script>
-        var menu_btn = document.querySelector("#menu-btn")
-        var sidebar = document.querySelector("#sidebar")
-        var container = document.querySelector(".my-container")
-        menu_btn.addEventListener("click", () => {
-            sidebar.classList.toggle("active-nav")
-            container.classList.toggle("active-cont")
-        })
-    </script>
-
 </body>
 
 </html>
