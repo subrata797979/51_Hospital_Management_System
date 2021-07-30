@@ -87,6 +87,7 @@ a:hover {
 .side-link:hover svg {
     max-width: 3rem;
     margin: 0 1.5rem;
+    color: #FFC300;
 }
 
 .side-link:hover .link-text {
@@ -115,6 +116,7 @@ a:hover {
 
 .sidebar:hover .logo svg {
     transform: rotate(-180deg);
+    margin-left: auto;
 }
 
 /* large screens */
@@ -131,9 +133,6 @@ a:hover {
     .sidebar:hover .link-text {
         display: inline;
         transition: opacity var(--transition-speed);
-    }
-    .sidebar:hover .link-text {
-        display: block;
     }
     
     /* main css */
@@ -153,6 +152,7 @@ a:hover {
         bottom : 0;
         width: 100vw;
         height: 5rem;
+        z-index: 2147483647;
     }
     .logo {
         display: none;
@@ -169,8 +169,13 @@ a:hover {
         padding: 0;
     }
     article {
-        margin: 0.5rem;
-        padding: 0.5rem;
+        margin: 0.25rem;
+        margin-bottom: 5rem;
+        padding: 0;
+    }
+    .container {
+        margin: 0;
+        padding: 0;
     }
 }
 
