@@ -21,7 +21,7 @@ require_once("./admin-doctor/operation.php");
     <!-- css files -->
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/dark-mode.css">
-    <link rel="stylesheet" href="../../css/dashboard.css">  
+    <link rel="stylesheet" href="../../css/dashboard.css">
     <link rel="stylesheet" href="../../css/fa.css">
 
     <title>Admin Dashboard</title>
