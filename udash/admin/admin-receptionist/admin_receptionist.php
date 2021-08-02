@@ -37,15 +37,15 @@ require_once("./admin-doctor/operation.php");
 
         <article>
             <div class="container text-center py-3">
-                <h1 class="py-4 mb-5 bg-dark text-light rounded"><i class="fas fa-swatchbook"></i> Doctor <spand class="text-warning">Details</span></h1>
+                <h1 class="py-4 mb-5 bg-dark text-light rounded"><i class="fas fa-swatchbook"></i> Receptionist <spand class="text-warning">Details</span></h1>
                 <div class="d-flex justify-content-center">
                     <form action="" method="post" class="w-75">
                         <div class="row pt-2">
                             <div class="col-md col-lg-4">
-                                <?php inputElement("<i class='fas fa-people-carry'></i>", "ID", "did", setID()); ?>
+                                <?php inputElement("<i class='fas fa-id-card'></i>", "ID", "did", setID()); ?>
                             </div>
                             <div class="col-md col-lg-8">
-                                <?php inputElement("<i class='fas fa-dollar-sign'></i>", "Name", "dname", ""); ?>
+                                <?php inputElement("<i class='fas fa-file-signature'></i>", "Name", "dname", ""); ?>
                             </div>
                         </div>
                         <div class="pt-2">
@@ -53,23 +53,23 @@ require_once("./admin-doctor/operation.php");
                         </div>
                         <div class="row pt-2">
                             <div class="col-md">
-                                <?php inputElement("<i class='fas fa-people-carry'></i>", "Date of birth : YYYY-MM-DD", "dob", ""); ?>
+                                <?php inputElement("<i class='fas fa-calendar-alt'></i>", "Date of birth : YYYY-MM-DD", "dob", ""); ?>
                             </div>
                             <div class="col-md">
-                                <?php inputElement("<i class='fas fa-people-carry'></i>", "Email", "email", ""); ?>
-                            </div>
-                        </div>
-                        <div class="row pt-2">
-                            <div class="col-md">
-                                <?php inputElement("<i class='fas fa-dollar-sign'></i>", "Speciality", "spl", ""); ?>
-                            </div>
-                            <div class="col-md">
-                                <?php inputElement("<i class='fas fa-dollar-sign'></i>", "Mobile No.", "ph", ""); ?>
+                                <?php inputElement("<i class='fas fa-envelope'></i>", "Email", "email", ""); ?>
                             </div>
                         </div>
                         <div class="row pt-2">
                             <div class="col-md">
-                                <?php inputElement("<i class='fas fa-people-carry'></i>", "Experience", "expr", ""); ?>
+                                <?php inputElement("<i class='fas fa-user-tag'></i>", "Speciality", "spl", ""); ?>
+                            </div>
+                            <div class="col-md">
+                                <?php inputElement("<i class='fas fa-mobile-alt'></i>", "Mobile No.", "ph", ""); ?>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col-md">
+                                <?php inputElement("<i class='fas fa-flask'></i>", "Experience", "expr", ""); ?>
                             </div>
                             <div class="col-md">
                                 <?php inputElement("<i class='fas fa-dollar-sign'></i>", "Salary", "sal", ""); ?>

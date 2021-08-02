@@ -50,6 +50,20 @@ $dotenv->load();
                 Voluptates eius magni at labore a asperiores illum tempore obcaecati. Illum nisi at deleniti fuga totam dolorem, provident explicabo omnis dignissimos impedit nobis facere? Neque optio deleniti placeat incidunt excepturi?
                 Hic cupiditate dolore, iste nam modi iure minus cumque saepe sit, voluptatum facilis! Assumenda aliquid quisquam magnam voluptate inventore dignissimos mollitia perferendis, animi atque, fugiat hic quo nisi temporibus. Ipsa?
             </p>
+            <script>
+                var today= new Date();
+                var hourNow = today.getHours();
+                var greeting;
+                if (hourNow > 18) {
+                greeting= 'Good evening!'; }
+                else if (hourNow > 12) {
+                greeting = ' Good afternoon!'; }
+                else if (hourNow > 0) {
+                greeting = 'Good morni ng!'; }
+                else {
+                greeting = 'Welcome! ' ; }
+                document.write("<h4 class='text-center'><span class='text-warning'>"+ greeting +"</span> ADMIN<h4>");
+            </script>
         </article>
 
     </main>

@@ -24,16 +24,15 @@ function Createdb(){
         $con = mysqli_connect($servername, $username, $password, $dbname);
 
         $sql = "
-                        CREATE TABLE IF NOT EXISTS doctor (
-                            did INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                            dname VARCHAR (25) NOT NULL,
+                        CREATE TABLE IF NOT EXISTS patient (
+                            pid INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                            pname VARCHAR (25) NOT NULL,
                             addr VARCHAR (50),
                             dob date,
                             email VARCHAR (30) NOT NULL,
-                            spl VARCHAR (30),
                             ph VARCHAR (20),
-                            expr VARCHAR (30),
-                            sal FLOAT
+                            blood VARCHAR (5),
+                            gender VARCHAR (5)
                         );
         ";
 

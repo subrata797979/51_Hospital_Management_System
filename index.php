@@ -43,7 +43,7 @@
             <div class="row ">
 
                 <div class="col-md col-lg-6 col-xxl-7 align-self-center">
-                    <img class="img-fluid mx-auto d-block joinus pt-2" src="./images/doctor.png" alt="Responsive image">
+                    <img class="img-fluid mx-auto d-block pt-2" src="./images/doctor.png" alt="Responsive image">
                 </div>
 
                 <div class="col-sm col-md-6 col-lg-6 col-xxl-4 p-5 align-self-center ">
@@ -127,8 +127,6 @@
     <script src="./js/custom.js"></script>
     <script src="./js/bootstrap.bundle.js"></script>
     <script src="./js/dark-mode-switch.js"></script>
-
-
 </body>
 </html>
 
