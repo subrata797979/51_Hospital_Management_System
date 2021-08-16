@@ -1,73 +1,107 @@
+<?php
+//for hiding errors
+//error_reporting(E_PARSE | E_ERROR);
+$upOne = dirname(__DIR__, 2);
+require_once $upOne . '/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable($upOne);
+$dotenv->load();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap 5 Side Bar Navigation</title>
-    <!-- bootstrap 5 css -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <title>Patient Dashboard</title>
     <!-- custom css -->
-    <link rel="stylesheet" href="./admin_dash.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/dark-mode.css">
+    <link rel="stylesheet" href="../../css/fa.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand d-flex flex-column align-item-start" id="sidebar">
-        <a href="#" class="navbar-brand text-light mt-5">
-            <div class="display-5 font-weight-bold">THANOS</div>
-        </a>
-        <ul class="navbar-nav d-flex flex-column mt-5 w-100">
-            <li class="nav-item w-100">
-                <a href="#" class="nav-link text-light pl-4">Home</a>
-            </li>
-            <li class="nav-item w-100">
-                <a href="#" class="nav-link text-light pl-4">About</a>
-            </li>
-            <li class="nav-item w-100">
-                <a href="#" class="nav-link text-light pl-4">Blog</a>
-            </li>
-            <li class="nav-item dropdown w-100">
-                <a href="#" class="nav-link dropdown-toggle text-light pl-4" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Service</a>
-                <ul class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
-                    <li><a href="#" class="dropdown-item text-light pl-4 p-2">Service 01</a></li>
-                    <li><a href="#" class="dropdown-item text-light pl-4 p-2">Service 02</a></li>
-                    <li><a href="#" class="dropdown-item text-light pl-4 p-2">Service 03</a></li>
-                </ul>
-            </li>
-            <li class="nav-item w-100">
-                <a href="#" class="nav-link text-light pl-4">Contact</a>
-            </li>
-        </ul>
-    </nav>
-    <section class="p-4 my-container">
-        <button class="btn my-4" id="menu-btn">Toggle Sidebar</button>
-        <h1>Bootstrap 5 Sidebar Navigation</h1>
-        <p class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam facilis inventore harum, architecto libero recusandae porro doloremque sunt cum consectetur, autem, vitae ea nihil sapiente voluptas at aut suscipit eos? Sapiente quam culpa aliquam
-            itaque debitis nihil doloremque rem! Praesentium quae, facere nobis impedit quisquam aliquid maxime error? Totam eaque earum fuga aliquam sequi excepturi illum optio quas tempora ea! Eum perspiciatis accusantium distinctio eveniet consequatur
-            sint illo officiis? Saepe dolores fugiat rerum, voluptatem sunt culpa nihil accusantium voluptates unde hic magnam quos est perspiciatis recusandae incidunt quod laborum vitae. Harum modi inventore ea odit eaque ut maiores voluptate nihil
-            aspernatur voluptatibus exercitationem ipsa nam animi neque tempore, eligendi, repellendus praesentium ex voluptatum? Magni laboriosam nemo, assumenda veniam aperiam eum! Eos, ipsum. Eum illo quos quo tempora excepturi reprehenderit numquam
-            voluptas! Blanditiis autem optio labore quisquam culpa, tempora minus eum repudiandae ea voluptatem quia obcaecati velit cum dolorum esse dolorem!</p>
-        <p class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam facilis inventore harum, architecto libero recusandae porro doloremque sunt cum consectetur, autem, vitae ea nihil sapiente voluptas at aut suscipit eos? Sapiente quam culpa aliquam
-            itaque debitis nihil doloremque rem! Praesentium quae, facere nobis impedit quisquam aliquid maxime error? Totam eaque earum fuga aliquam sequi excepturi illum optio quas tempora ea! Eum perspiciatis accusantium distinctio eveniet consequatur
-            sint illo officiis? Saepe dolores fugiat rerum, voluptatem sunt culpa nihil accusantium voluptates unde hic magnam quos est perspiciatis recusandae incidunt quod laborum vitae. Harum modi inventore ea odit eaque ut maiores voluptate nihil
-            aspernatur voluptatibus exercitationem ipsa nam animi neque tempore, eligendi, repellendus praesentium ex voluptatum? Magni laboriosam nemo, assumenda veniam aperiam eum! Eos, ipsum. Eum illo quos quo tempora excepturi reprehenderit numquam
-            voluptas! Blanditiis autem optio labore quisquam culpa, tempora minus eum repudiandae ea voluptatem quia obcaecati velit cum dolorum esse dolorem!</p>
-    </section>
+    <style>
+        @media only screen and (min-width: 995px){
+            .my-container .row .col-auto table {
+                border-collapse: separate;
+                border-spacing: 10px; /* cellspacing */
+                padding: 20px;
+            } 
+
+            .my-container .row .col-auto table tr, table td {
+                padding: 20px; /* cellpadding */
+            }
+        }
+    </style>
+    <main>
+        <?php
+            include '../dash_navbar.php';
+        ?>
+        <section class="p-3 my-container">
+            <h1 class="text-center fs-1 m-3 py-3">PATIENT <span class="text-warning">DASHBOARD</span></h1>
+
+            <div class="row justify-content-center">
+                <div class="col-auto col-md-6 col col-lg-8 ">
+                <table class="table table-striped table-responsive">
+                <tbody>
+                        <tr>
+                            <td class="col-6">Name</td>
+                            <td class="col-6">Ethen Hunt</td>
+                        </tr>
+                        <tr>
+                            <td>Date of Birth</td>
+                            <td>01/24/1988</td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td>Male</td>
+                        </tr>
+                        <tr>
+                            <td>Blood Type</td>
+                            <td>O+</td>
+                        </tr>
+                        <tr>
+                            <td>Occupation</td>
+                            <td>Shopkeeper</td>
+                        </tr>
+                        <tr>
+                            <td>Home Address</td>
+                            <td>Sealdah, Kolkata</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><a href="mailto:ethenhunt1990@gmail.com">ethenhunt1990@gmail.com</a></td>
+                        </tr>
+                            <td>Phone Number</td>
+                            <td>123-4567-890(Mobile1)<br>555-4567-890(Mobile2)</td> 
+                        </tr>
+                        <tr>
+                            <td>Admit Date</td>
+                            <td>23/07/2021</td>
+                        </tr>
+                        <tr>
+                            <td>Discharge Date</td>
+                            <td>15/08/2021</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <div class="col-md-12 my-3 text-center">
+                <button type="button" class="btn btn-primary">Download Report</button>
+                <button type="button" class="btn btn-warning">Download Bill</button>
+            </div>
+            
+        </section>
+            
+    </main>
 
 
     <!-- bootstrap js -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
-    <!-- custom js -->
-    <script>
-        var menu_btn = document.querySelector("#menu-btn")
-        var sidebar = document.querySelector("#sidebar")
-        var container = document.querySelector(".my-container")
-        menu_btn.addEventListener("click", () => {
-            sidebar.classList.toggle("active-nav")
-            container.classList.toggle("active-cont")
-        })
-    </script>
+    <!-- js files -->
+    <script src="../../js/bootstrap.bundle.js"></script>
+    <script src="../../js/dark-mode-switch.min.js"></script>
 </body>
 
 </html>

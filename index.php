@@ -42,7 +42,7 @@
             <!-- Row 2 -->
             <div class="row ">
 
-                <div class="col-md col-lg-6 col-xxl-7 align-self-center">
+                <div class="col-md col-lg-6 col-xxl-7 align-self-center d-none d-md-block">
                     <img class="img-fluid mx-auto d-block pt-2" src="./images/doctor.png" alt="Responsive image">
                 </div>
 
@@ -115,12 +115,28 @@
                 </div>             
             </div>
             <br>
-            
+            <div class="row">
+                <div class="col-md p-xl-5">
+                    <h1>Are You Protected Against <span class="text-danger" style="font-size: 150%">COVID-19</span></h1>
+                    <p class="lead my-4 pt-lg-5 fs-4">
+                        In this pandemic, when the whole world is shattered into pieces, 
+                        we are trying to our very extent to repaire the damage collecting all the pieces. 
+                    </p>
+                    <button class="btn btn-outline-primary d-inline px-3 mx-2">Book Slot</button>
+                    <button class="btn btn-outline-warning d-inline px-3 mx-2">Verify Certificate</button>
+                    <button class="btn btn-danger d-inline px-3 mx-2">View Portal</button>
+                </div>
+                <br>
+                <div class="col-md p-xl-5 d-none d-lg-block">
+                    <img src="images/corona.png" class="img-fluid" alt="corona virus">
+                </div>             
+            </div>
+            <br>  
         </div>
     </section>
 
     <?php
-    include './footer.php';
+        include './footer.php';
     ?>
     
     <!-- What is HMS ? -->

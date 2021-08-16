@@ -20,12 +20,12 @@ $dotenv->load();
     <link rel="stylesheet" href="../../css/dark-mode.css">
     <link rel="stylesheet" href="../../css/dashboard.css">
     <link rel="stylesheet" href="../../css/fa.css">
+    <link rel="stylesheet" href="../../css/card.css">
 
     <title>Admin Dashboard</title>
 </head>
 
 <body>
-
     <?php
         include './admin_sidebar.php';
     ?>
@@ -37,19 +37,102 @@ $dotenv->load();
         ?>
 
         <article>
-            <h1 class="text-center fs-1 m-3">ADMIN <spand class="text-warning">DASHBOARD</span></h1>
-            <p class="p-3">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur quaerat aut corporis optio suscipit dolore, voluptatibus officia ducimus fugit voluptatem soluta praesentium, possimus odio dolor, est doloribus sed commodi iusto.
-                Harum debitis voluptate corporis eligendi corrupti hic eum, inventore illo quae ab possimus architecto necessitatibus assumenda unde vero beatae omnis rem voluptas nostrum delectus! Alias sed consequuntur rem quae minus.
-                Soluta molestias, ullam harum doloribus possimus delectus at est neque ratione dignissimos recusandae cumque repellendus dolor, ipsum atque rem perferendis natus nesciunt tempore voluptatum culpa. Fugiat nisi inventore dicta suscipit.
-                Eum recusandae consequatur atque rem voluptatum possimus porro aperiam cum laudantium ducimus veniam commodi assumenda ratione earum illo quo, odio alias iusto? Labore dolorem assumenda ab quod eius, animi veritatis?
-                Excepturi consectetur praesentium exercitationem nam mollitia hic porro architecto dicta facere impedit sequi non saepe veritatis soluta, incidunt esse sit. Molestiae explicabo atque officia suscipit commodi sequi aut repellendus maiores.
-                Minima assumenda consequuntur beatae facilis adipisci, impedit, fuga illo a vel provident et voluptates, deleniti magnam! Deserunt esse sapiente id commodi. Iste voluptatem consequatur aperiam odit molestias omnis culpa ratione!
-                Autem officiis fugiat placeat aliquid illum ex vel corporis ut quos, nobis ad quia quisquam eos ullam praesentium tenetur aperiam nesciunt accusantium nostrum aspernatur? Ut laboriosam obcaecati odit consequatur laborum!
-                Voluptatum, aspernatur minima! Beatae possimus ullam harum ratione, qui alias eaque iste animi ut natus sequi sint expedita unde aliquid illo voluptas necessitatibus dignissimos cum, pariatur dolorum nulla officia? Molestiae!
-                Voluptates eius magni at labore a asperiores illum tempore obcaecati. Illum nisi at deleniti fuga totam dolorem, provident explicabo omnis dignissimos impedit nobis facere? Neque optio deleniti placeat incidunt excepturi?
-                Hic cupiditate dolore, iste nam modi iure minus cumque saepe sit, voluptatum facilis! Assumenda aliquid quisquam magnam voluptate inventore dignissimos mollitia perferendis, animi atque, fugiat hic quo nisi temporibus. Ipsa?
-            </p>
+            <h1 class="text-center fs-1 mt-3">ADMIN <spand class="text-warning">DASHBOARD</span></h1>
+            <div class="container mt-5 mb-3 align-self-center">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card p-3 m-3">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-row align-items-center">
+                                    <div class="icon"> <i class="bx bxl-mailchimp"></i> </div>
+                                    <div class="ms-2 c-details">
+                                        <h6 class="mb-0">Doctor</h6> <span>1 days ago</span>
+                                    </div>
+                                </div>
+                                <div class="badge"> <span>Recently Added</span> </div>
+                            </div>
+                            <div class="mt-5">
+                                <h3 class="heading">Dr. Ekadanta  Malhotra<br>Ahmedabad</h3>
+                                <div class="mt-5">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="mt-3"> <span class="text1">12 Active <span class="text2">of 30 capacity</span></span> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card p-3 m-3">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-row align-items-center">
+                                    <div class="icon"> <i class="bx bxl-dribbble"></i> </div>
+                                    <div class="ms-2 c-details">
+                                        <h6 class="mb-0">Patient</h6> <span>4 days ago</span>
+                                    </div>
+                                </div>
+                                <div class="badge"> <span>Recently Added</span> </div>
+                            </div>
+                            <div class="mt-5">
+                                <h3 class="heading">Sur  Patel<br>Mumbai</h3>
+                                <div class="mt-5">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="mt-3"> <span class="text1">42 Active <span class="text2">of 70 capacity</span></span> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                            <div class="card p-3 m-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div class="icon"> <i class="bx bxl-reddit"></i> </div>
+                                        <div class="ms-2 c-details">
+                                            <h6 class="mb-0">Receptionist</h6> <span>2 days ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="badge"> <span>Recently Added</span> </div>
+                                </div>
+                                <div class="mt-5">
+                                    <h3 class="heading">Vijaya  Mohabir <br>Kolkata</h3>
+                                    <div class="mt-5">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="mt-3"> <span class="text1">2 Active <span class="text2">of 5 capacity</span></span> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card p-3 m-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div class="icon"> <i class="bx bxl-reddit"></i> </div>
+                                        <div class="ms-2 c-details">
+                                            <h6 class="mb-0">Employee</h6> <span>2 days ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="badge"> <span>Recently Added</span> </div>
+                                </div>
+                                <div class="mt-5">
+                                    <h3 class="heading">Nikitha  Das <br>Mumbai</h3>
+                                    <div class="mt-5">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="mt-3"> <span class="text1">52 Active <span class="text2">of 100 capacity</span></span> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <script>
                 var today= new Date();
                 var hourNow = today.getHours();
@@ -62,7 +145,7 @@ $dotenv->load();
                 greeting = 'Good morni ng!'; }
                 else {
                 greeting = 'Welcome! ' ; }
-                document.write("<h4 class='text-center'><span class='text-warning'>"+ greeting +"</span> ADMIN<h4>");
+                document.write("<h4 class='text-center m-5'><span class='text-warning'>"+ greeting +"</span> ADMIN<h4>");
             </script>
         </article>
 
@@ -70,6 +153,7 @@ $dotenv->load();
     <!-- js files -->
     <script src="../../js/bootstrap.bundle.js"></script>
     <script src="../../js/dark-mode-switch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 
 </html>
