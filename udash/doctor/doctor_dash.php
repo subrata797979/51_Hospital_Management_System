@@ -22,7 +22,7 @@ $dotenv->load();
     <link rel="stylesheet" href="../../css/fa.css">
     <link rel="stylesheet" href="../../css/card.css">
 
-    <title>Employee Dashboard</title>
+    <title>Doctor Dashboard</title>
 </head>
 
 <body>
@@ -57,7 +57,7 @@ $dotenv->load();
             <li class="side-item">
                 <a href="<?php echo $_ENV['HTTP'] . '/udash/admin/admin-employee/admin_employee.php' ?>" class="side-link">
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ambulance" class="svg-inline--fa fa-ambulance fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M624 352h-16V243.9c0-12.7-5.1-24.9-14.1-33.9L494 110.1c-9-9-21.2-14.1-33.9-14.1H416V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h16c0 53 43 96 96 96s96-43 96-96h128c0 53 43 96 96 96s96-43 96-96h48c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM160 464c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm144-248c0 4.4-3.6 8-8 8h-56v56c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-56h-56c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h56v-56c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v56h56c4.4 0 8 3.6 8 8v48zm176 248c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-208H416V144h44.1l99.9 99.9V256z"></path></svg>
-                <span class="link-text">Doctor List</span>
+                <span class="link-text">Employee List</span>
                 </a>
             </li>
 
@@ -77,7 +77,7 @@ $dotenv->load();
         ?>
 
         <article>
-            <h1 class="text-center fs-1 mt-3">EMPLOYEE <spand class="text-warning">DASHBOARD</span></h1>
+            <h1 class="text-center fs-1 mt-3">DOCTOR <spand class="text-warning">DASHBOARD</span></h1>
             <div class="container mt-5 mb-3 align-self-center">
                 <div class="row">
                     <div class="col-md-4">
@@ -86,13 +86,13 @@ $dotenv->load();
                                 <div class="d-flex flex-row align-items-center">
                                     <div class="icon"> <i class="bx bxl-mailchimp"></i> </div>
                                     <div class="ms-2 c-details">
-                                        <h6 class="mb-0">Doctor</h6> <span>1 days ago</span>
+                                        <h6 class="mb-0">Employee</h6> <span>1 days ago</span>
                                     </div>
                                 </div>
                                 <div class="badge"> <span>Recently Added</span> </div>
                             </div>
                             <div class="mt-5">
-                                <h3 class="heading">Doctor List</h3>
+                                <h3 class="heading">Employee List</h3>
                                 <div class="mt-5">
                                     <div class="progress">
                                         <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -130,13 +130,13 @@ $dotenv->load();
                                     <div class="d-flex flex-row align-items-center">
                                         <div class="icon"> <i class="bx bxl-reddit"></i> </div>
                                         <div class="ms-2 c-details">
-                                            <h6 class="mb-0">Details</h6> <span>2 days ago</span>
+                                            <h6 class="mb-0">Feedback</h6> <span>2 days ago</span>
                                         </div>
                                     </div>
                                     <div class="badge"> <span>Recently Added</span> </div>
                                 </div>
                                 <div class="mt-5">
-                                    <h3 class="heading">Patient Details</h3>
+                                    <h3 class="heading">Provide Feedback</h3>
                                     <div class="mt-5">
                                         <div class="progress">
                                             <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -160,7 +160,7 @@ $dotenv->load();
                 greeting = 'Good morni ng!'; }
                 else {
                 greeting = 'Welcome! ' ; }
-                document.write("<h4 class='text-center m-5'><span class='text-warning'>"+ greeting +"</span> EMPLOYEE<h4>");
+                document.write("<h4 class='text-center m-5'><span class='text-warning'>"+ greeting +"</span> DOCTOR<h4>");
             </script>
         </article>
 
