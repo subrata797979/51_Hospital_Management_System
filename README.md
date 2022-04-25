@@ -1,8 +1,7 @@
 # 51_Hospital_Management_System
 
   https://1drv.ms/p/s!AgJqX37WlxrKsDmvcKiEMC00Pkbz?e=vjJmko
-  
-  ![image](https://user-images.githubusercontent.com/35250133/165123172-e7f17125-a626-4e0e-887b-731340567390.png)
+
 
 
 ![image](https://user-images.githubusercontent.com/35250133/165123251-014da841-6e94-463e-8af2-62765c65e949.png)
